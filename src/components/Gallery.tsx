@@ -1,6 +1,8 @@
 import { Card, CardContent } from '@/components/ui/card';
 
-// Using placeholder images from the context
+// Real drip irrigation project images
+import dripCloseupImage from '@/assets/drip-closeup-system.jpg';
+
 const galleryImages = [
   {
     src: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?w=800&h=600&fit=crop",
@@ -21,22 +23,58 @@ const galleryImages = [
     description: "Extensive drip irrigation network covering thousands of acres in desert regions"
   },
   {
-    src: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?w=800&h=600&fit=crop",
-    alt: "Precision irrigation system",
-    title: "Precision Technology",
-    description: "Advanced drip emitters providing exact water amounts for optimal plant growth"
+    src: dripCloseupImage,
+    alt: "Close-up drip irrigation emitters",
+    title: "Precision Emitter Technology",
+    description: "High-quality drip emitters delivering precise water amounts directly to plant roots"
   },
   {
-    src: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&h=600&fit=crop",
-    alt: "Greenhouse drip system",
-    title: "Greenhouse Integration",
-    description: "Climate-controlled environments with integrated drip irrigation systems"
+    src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop",
+    alt: "Date palm irrigation in desert",
+    title: "Date Palm Cultivation",
+    description: "Traditional date palm groves enhanced with modern drip irrigation systems"
   },
   {
-    src: "https://images.unsplash.com/photo-1469041797191-50ace28483c3?w=800&h=600&fit=crop",
-    alt: "Solar powered irrigation",
+    src: "https://images.unsplash.com/photo-1574263867128-5b2f1d1b7aa0?w=800&h=600&fit=crop",
+    alt: "Tomato greenhouse with drip irrigation",
+    title: "Greenhouse Production",
+    description: "Climate-controlled greenhouse with integrated drip irrigation for optimal yields"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=800&h=600&fit=crop",
+    alt: "Workers installing drip system",
+    title: "Professional Installation",
+    description: "Expert technicians installing state-of-the-art drip irrigation systems"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=800&h=600&fit=crop",
+    alt: "Vegetable rows with drip lines",
+    title: "Row Crop Irrigation",
+    description: "Perfectly aligned drip lines supporting healthy vegetable production in arid conditions"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1574263867128-5b2f1d1b7aa0?w=800&h=600&fit=crop",
+    alt: "Automated irrigation control system",
+    title: "Smart Control Systems",
+    description: "Advanced automated control panels for efficient water management and scheduling"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&h=600&fit=crop",
+    alt: "Orchard drip irrigation",
+    title: "Orchard Irrigation",
+    description: "Fruit tree orchards thriving with specialized drip irrigation designed for tree crops"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1574263867128-5b2f1d1b7aa0?w=800&h=600&fit=crop",
+    alt: "Solar powered drip system",
     title: "Solar Powered Systems",
     description: "Sustainable solar-powered drip irrigation for remote desert locations"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=800&h=600&fit=crop",
+    alt: "Large scale desert farm aerial view",
+    title: "Large Scale Desert Farming",
+    description: "Aerial view of thousands of acres transformed through precision drip irrigation"
   }
 ];
 
