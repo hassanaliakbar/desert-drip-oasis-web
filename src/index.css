@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 42 15% 98%;
     --popover-foreground: 25 20% 15%;
 
-    --primary: 25 45% 35%;
+    --primary: 25 55% 28%;
     --primary-foreground: 42 15% 98%;
 
     --secondary: 42 25% 92%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 42 20% 95%;
     --muted-foreground: 25 15% 45%;
 
-    --accent: 120 40% 45%;
+    --accent: 120 50% 38%;
     --accent-foreground: 42 15% 98%;
 
     --destructive: 0 84% 60%;
@@ -34,38 +34,40 @@ All colors MUST be HSL.
 
     --border: 42 20% 88%;
     --input: 42 20% 88%;
-    --ring: 25 45% 35%;
+    --ring: 25 55% 28%;
 
-    /* Desert & Growth Theme Colors */
-    --desert-sand: 42 35% 85%;
-    --desert-orange: 25 65% 55%;
-    --growth-green: 120 40% 45%;
-    --earth-brown: 25 45% 35%;
+    /* Enhanced Desert & Growth Theme Colors */
+    --desert-sand: 42 40% 88%;
+    --desert-orange: 25 75% 55%;
+    --growth-green: 120 50% 38%;
+    --earth-brown: 25 55% 28%;
+    --water-blue: 200 85% 45%;
+    --sunset-gold: 45 90% 60%;
     
-    /* Gradients */
+    /* Enhanced Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--desert-orange)), hsl(var(--earth-brown)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--desert-sand)));
+    --gradient-water: linear-gradient(135deg, hsl(var(--water-blue)), hsl(var(--growth-green)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset-gold)), hsl(var(--desert-orange)));
     
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--earth-brown) / 0.2);
-    --shadow-card: 0 4px 20px -8px hsl(var(--earth-brown) / 0.15);
+    /* Enhanced Shadows */
+    --shadow-elegant: 0 20px 60px -12px hsl(var(--earth-brown) / 0.25);
+    --shadow-card: 0 8px 30px -8px hsl(var(--earth-brown) / 0.18);
+    --shadow-glow: 0 0 40px hsl(var(--growth-green) / 0.15);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -114,6 +116,54 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-desert-orange to-earth-brown bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-elegant;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }

@@ -80,58 +80,93 @@ const galleryImages = [
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="py-20 bg-muted/30">
+    <section id="gallery" className="py-24 bg-muted/30 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-20 right-20 w-80 h-80 bg-desert-orange/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-60 h-60 bg-growth-green/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Installation Gallery
+        <div className="text-center mb-20 animate-fade-up">
+          <div className="inline-block px-4 py-2 bg-growth-green/10 rounded-full text-growth-green text-sm font-medium mb-4">
+            📸 Success Stories
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
+            Installation 
+            <span className="gradient-text"> Gallery</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Witness the transformation of barren desert landscapes into thriving agricultural 
             centers with our proven drip irrigation systems.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {galleryImages.map((image, index) => (
-            <Card key={index} className="group overflow-hidden border-0 shadow-card hover:shadow-elegant transition-all duration-500">
+            <Card 
+              key={index} 
+              className="group overflow-hidden border-0 shadow-card hover:shadow-elegant transition-all duration-500 hover-lift animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="relative overflow-hidden">
                 <img 
                   src={image.src} 
                   alt={image.alt}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-125"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-90 transition-all duration-500 flex items-center justify-center">
+                  <div className="text-white text-center p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 className="text-xl font-bold mb-2">{image.title}</h4>
+                    <p className="text-sm opacity-90">{image.description}</p>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-water-blue text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  View Details
+                </div>
               </div>
               
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {image.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed line-clamp-2">
                   {image.description}
                 </p>
+                <div className="mt-4 h-1 w-0 bg-gradient-water rounded-full group-hover:w-full transition-all duration-700"></div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-desert-orange to-earth-brown rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-              Ready to Transform Your Desert Land?
-            </h3>
-            <p className="text-primary-foreground/90 text-lg mb-6 max-w-2xl mx-auto">
-              Join hundreds of successful farmers who have revolutionized their desert agriculture 
-              with our proven drip irrigation systems.
-            </p>
-            <button 
-              onClick={() => window.open('https://wa.me/1234567890', '_blank')}
-              className="bg-growth-green hover:bg-growth-green/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
-            >
-              Get Your Custom Quote
-            </button>
+        {/* Enhanced CTA Section */}
+        <div className="text-center animate-fade-up">
+          <div className="bg-gradient-sunset rounded-3xl p-12 md:p-16 shadow-elegant relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-black/20"></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
+                Ready to Transform Your 
+                <span className="text-sunset-gold"> Desert Land?</span>
+              </h3>
+              <p className="text-white/90 text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                Join hundreds of successful farmers who have revolutionized their desert agriculture 
+                with our proven drip irrigation systems.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <button 
+                  onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+                  className="bg-growth-green hover:bg-growth-green/90 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  <span className="mr-2">💬</span>
+                  Get Your Custom Quote
+                </button>
+                <button 
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="glass-effect border-white/30 text-white hover:bg-white/20 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105"
+                >
+                  <span className="mr-2">📞</span>
+                  Schedule Consultation
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
