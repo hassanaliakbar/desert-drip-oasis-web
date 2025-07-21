@@ -1,36 +1,36 @@
-import { Droplets, Sprout, DollarSign, Zap, Clock, Award } from 'lucide-react';
+import { Wrench, Building2, Zap, FileText, Target, Settings } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const benefits = [
   {
-    icon: Droplets,
-    title: "60% Water Savings",
-    description: "Precision water delivery directly to plant roots minimizes waste and maximizes efficiency."
+    icon: Wrench,
+    title: "Complete Project Management",
+    description: "End-to-end drip irrigation project delivery from design to commissioning with expert supervision."
   },
   {
-    icon: Sprout,
-    title: "40% Higher Yields",
-    description: "Consistent moisture levels create optimal growing conditions for maximum productivity."
+    icon: Building2,
+    title: "Professional Installation",
+    description: "Certified technicians ensure precise pipe laying and system installation for optimal performance."
   },
   {
-    icon: DollarSign,
-    title: "Cost Effective",
-    description: "Reduced water bills and increased crop yields provide excellent return on investment."
+    icon: Settings,
+    title: "Quality Pipe Systems",
+    description: "Premium grade drip pipes and fittings designed for harsh desert conditions and long-term durability."
   },
   {
     icon: Zap,
-    title: "Energy Efficient",
-    description: "Low-pressure systems require minimal energy, perfect for remote desert locations."
+    title: "Smart Control Systems",
+    description: "Automated irrigation control panels and monitoring systems for efficient project management."
   },
   {
-    icon: Clock,
-    title: "Time Saving",
-    description: "Automated irrigation reduces manual labor and allows focus on other farm activities."
+    icon: FileText,
+    title: "Project Documentation",
+    description: "Complete project records, maintenance schedules, and technical documentation for all installations."
   },
   {
-    icon: Award,
-    title: "Proven Results",
-    description: "Successfully implemented across 500+ desert farms with consistent results."
+    icon: Target,
+    title: "Turnkey Solutions",
+    description: "Complete turnkey drip irrigation projects including site preparation, installation, and commissioning."
   }
 ];
 
@@ -44,15 +44,15 @@ const Benefits = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-20 animate-fade-up">
           <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
-            🚀 Premium Benefits
+            🏗️ Project Excellence
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
             Why Choose Our 
-            <span className="gradient-text"> Drip Systems?</span>
+            <span className="gradient-text"> Drip Projects?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Engineered specifically for extreme desert conditions, our systems deliver exceptional 
-            performance where traditional irrigation fails.
+            From initial design to final commissioning, we deliver complete drip irrigation projects 
+            with professional pipe installation and ongoing support.
           </p>
         </div>
 
@@ -88,25 +88,25 @@ const Benefits = () => {
         {/* Enhanced Stats Section */}
         <div className="bg-gradient-hero rounded-3xl p-12 shadow-elegant animate-fade-up">
           <h3 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
-            Proven Track Record
+            Our Project Portfolio
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="text-5xl md:text-6xl font-bold text-sunset-gold mb-3 group-hover:scale-110 transition-transform">500+</div>
-              <div className="text-white/90 text-lg">Successful Installations</div>
+              <div className="text-white/90 text-lg">Projects Completed</div>
             </div>
             <div className="text-center group">
-              <div className="text-5xl md:text-6xl font-bold text-water-blue mb-3 group-hover:scale-110 transition-transform">60%</div>
-              <div className="text-white/90 text-lg">Water Conservation</div>
+              <div className="text-5xl md:text-6xl font-bold text-water-blue mb-3 group-hover:scale-110 transition-transform">2M+</div>
+              <div className="text-white/90 text-lg">Meters of Pipe Installed</div>
             </div>
             <div className="text-center group">
               <div className="text-5xl md:text-6xl font-bold text-growth-green mb-3 group-hover:scale-110 transition-transform">15+</div>
-              <div className="text-white/90 text-lg">Years of Excellence</div>
+              <div className="text-white/90 text-lg">Years of Expertise</div>
             </div>
             <div className="text-center group">
-              <div className="text-5xl md:text-6xl font-bold text-white mb-3 group-hover:scale-110 transition-transform">98%</div>
-              <div className="text-white/90 text-lg">Client Satisfaction</div>
+              <div className="text-5xl md:text-6xl font-bold text-white mb-3 group-hover:scale-110 transition-transform">24/7</div>
+              <div className="text-white/90 text-lg">Project Support</div>
             </div>
           </div>
         </div>
