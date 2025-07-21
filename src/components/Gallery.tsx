@@ -2,6 +2,10 @@ import { Card, CardContent } from '@/components/ui/card';
 
 // Real drip irrigation project images
 import dripCloseupImage from '@/assets/drip-closeup-system.jpg';
+import dripPipesDesert from '@/assets/drip-pipes-desert.jpg';
+import aerialDripProject from '@/assets/aerial-drip-project.jpg';
+import dripPipesWarehouse from '@/assets/drip-pipes-warehouse.jpg';
+import dripInstallationProgress from '@/assets/drip-installation-progress.jpg';
 
 const galleryImages = [
   {
@@ -75,6 +79,30 @@ const galleryImages = [
     alt: "Large scale desert farm aerial view",
     title: "Large Scale Desert Farming",
     description: "Aerial view of thousands of acres transformed through precision drip irrigation"
+  },
+  {
+    src: dripPipesDesert,
+    alt: "Drip irrigation pipes in desert installation",
+    title: "Desert Pipe Installation",
+    description: "Professional installation of drip irrigation pipes across desert terrain for optimal coverage"
+  },
+  {
+    src: aerialDripProject,
+    alt: "Aerial view of drip irrigation project",
+    title: "Aerial Project Overview",
+    description: "Large-scale drip irrigation network covering extensive desert farmland from above"
+  },
+  {
+    src: dripPipesWarehouse,
+    alt: "Drip irrigation pipes and components warehouse",
+    title: "Quality Components Storage",
+    description: "High-grade drip irrigation pipes, fittings, and emitters ready for desert installations"
+  },
+  {
+    src: dripInstallationProgress,
+    alt: "Drip irrigation installation in progress",
+    title: "Installation in Progress",
+    description: "Professional team installing drip irrigation system in challenging desert conditions"
   }
 ];
 
