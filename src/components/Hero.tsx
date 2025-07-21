@@ -32,8 +32,8 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-8 leading-[0.9] text-balance">
-            Professional 
-            <span className="gradient-text block mt-2"> Drip Irrigation Projects</span>
+            Green Irrigation 
+            <span className="gradient-text block mt-2"> Systems Pakistan</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 leading-relaxed max-w-2xl">
