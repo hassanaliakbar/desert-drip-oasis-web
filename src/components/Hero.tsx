@@ -13,6 +13,10 @@ const Hero = () => {
           src={heroImage} 
           alt="Drip irrigation system in desert" 
           className="w-full h-full object-cover scale-105 animate-float"
+          onError={(e) => {
+            console.log('Failed to load hero image');
+            e.currentTarget.style.display = 'none';
+          }}
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>
         <div className="absolute inset-0 bg-black/20"></div>
@@ -79,35 +83,47 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Floating Project Images */}
-        <div className="absolute top-20 right-10 w-48 h-32 rounded-2xl overflow-hidden shadow-elegant animate-float z-5 opacity-80">
+        {/* Floating Project Images - Responsive positioning */}
+        <div className="hidden lg:block absolute top-20 right-10 w-48 h-32 rounded-2xl overflow-hidden shadow-elegant animate-float z-20 opacity-90">
           <img 
             src={dripPipesDesert} 
             alt="Drip pipes installation"
             className="w-full h-full object-cover"
+            onError={(e) => {
+              console.log('Failed to load dripPipesDesert image');
+              e.currentTarget.style.display = 'none';
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-hero opacity-40"></div>
-          <div className="absolute bottom-2 left-2 text-white text-xs font-bold">Pipe Installation</div>
+          <div className="absolute inset-0 bg-gradient-hero opacity-30"></div>
+          <div className="absolute bottom-2 left-2 text-white text-xs font-bold drop-shadow-lg">Pipe Installation</div>
         </div>
         
-        <div className="absolute bottom-40 right-20 w-56 h-36 rounded-2xl overflow-hidden shadow-elegant animate-pulse-slow z-5 opacity-80">
+        <div className="hidden lg:block absolute bottom-32 right-20 w-56 h-36 rounded-2xl overflow-hidden shadow-elegant animate-pulse-slow z-20 opacity-90">
           <img 
             src={aerialDripProject} 
             alt="Aerial project view"
             className="w-full h-full object-cover"
+            onError={(e) => {
+              console.log('Failed to load aerialDripProject image');
+              e.currentTarget.style.display = 'none';
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-hero opacity-40"></div>
-          <div className="absolute bottom-2 left-2 text-white text-xs font-bold">Completed Project</div>
+          <div className="absolute inset-0 bg-gradient-hero opacity-30"></div>
+          <div className="absolute bottom-2 left-2 text-white text-xs font-bold drop-shadow-lg">Completed Project</div>
         </div>
         
-        <div className="absolute top-1/2 right-2 w-40 h-28 rounded-2xl overflow-hidden shadow-elegant animate-bounce-slow z-5 opacity-80">
+        <div className="hidden xl:block absolute top-1/2 right-2 w-40 h-28 rounded-2xl overflow-hidden shadow-elegant animate-bounce-slow z-20 opacity-90">
           <img 
             src={dripInstallationProgress} 
             alt="Installation in progress"
             className="w-full h-full object-cover"
+            onError={(e) => {
+              console.log('Failed to load dripInstallationProgress image');
+              e.currentTarget.style.display = 'none';
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-hero opacity-40"></div>
-          <div className="absolute bottom-2 left-2 text-white text-xs font-bold">Work in Progress</div>
+          <div className="absolute inset-0 bg-gradient-hero opacity-30"></div>
+          <div className="absolute bottom-2 left-2 text-white text-xs font-bold drop-shadow-lg">Work in Progress</div>
         </div>
       </div>
 

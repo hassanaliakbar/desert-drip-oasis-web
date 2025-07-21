@@ -140,6 +140,10 @@ const Gallery = () => {
                   src={image.src} 
                   alt={image.alt}
                   className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-125"
+                  onError={(e) => {
+                    console.log(`Failed to load gallery image: ${image.title}`);
+                    e.currentTarget.src = "data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='%23e2e8f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%236b7280'%3EImage Loading...%3C/text%3E%3C/svg%3E";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-90 transition-all duration-500 flex items-center justify-center">
                   <div className="text-white text-center p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
