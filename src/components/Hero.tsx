@@ -1,5 +1,8 @@
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-drip-system.jpg';
+import dripPipesDesert from '@/assets/drip-pipes-desert.jpg';
+import aerialDripProject from '@/assets/aerial-drip-project.jpg';
+import dripInstallationProgress from '@/assets/drip-installation-progress.jpg';
 
 const Hero = () => {
   return (
