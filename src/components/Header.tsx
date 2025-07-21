@@ -33,7 +33,7 @@ const Header = () => {
               <Droplets className="h-7 w-7 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-white">Desert Drip Oasis</h1>
+              <h1 className="text-xl font-bold text-white">Drip Irrigation Solutions</h1>
               <p className="text-xs text-white/80">Premium Irrigation Solutions</p>
             </div>
           </div>
